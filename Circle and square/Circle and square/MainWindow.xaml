@@ -1,0 +1,72 @@
+﻿<Window x:Name="CircleAndSquareWindow" x:Class="Circle_and_square.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Circle_and_square"
+        mc:Ignorable="d"
+        Title="Circle and Square" ResizeMode="NoResize" Width="830" MaxHeight="550">
+    <Grid x:Name="MainGrid" Width="804" Height="504" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="280"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="85*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="504"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="CanvasBorder" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="4" BorderThickness="2,2,2,2" BorderBrush="Black" Width="504" Height="504" >
+            <Canvas x:Name="ShapesCanvas">
+                <Ellipse x:Name="Circle0" Height="100" Stroke="Black" Width="100" Canvas.Left="140" Canvas.Top="122"/>
+                <Rectangle x:Name="Sqaure0" Height="100" Stroke="Black" Width="100" Canvas.Left="295" Canvas.Top="250"/>
+            </Canvas>
+        </Border>
+        <StackPanel x:Name="ActiveStackPanel" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label x:Name="ActiveShapeLabel" Content="Active shape:" FontWeight="Bold" Height="26" Width="84"/>
+            <ComboBox x:Name="ActiveShapeComboBox" Height="26" Width="150" SelectionChanged="ActiveShapeComboBox_SelectionChanged" SelectedIndex="0"/>
+        </StackPanel>
+        <Grid x:Name="SettingsGrid" Grid.Column="1" Grid.Row="1" Width="300">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="SizeLabel" Content="Size" Width="40" Height="30" VerticalAlignment="Stretch" HorizontalAlignment="Left"/>
+            <Slider x:Name="SizeSlider" Height="30" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Stretch" Minimum="1" Maximum="500" ValueChanged="SizeSlider_ValueChanged" SmallChange="1" Orientation="Horizontal" Value="1"/>
+            <TextBox x:Name="SizeTextBox" TextWrapping="Wrap" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,10,0" VerticalContentAlignment="Center" Height="20" Width="50" IsEnabled="False"/>
+            <Label x:Name="XPositionLabel" Content="X position" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Stretch" ContentStringFormat=""/>
+            <Slider x:Name="XPositionSlider" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" SmallChange="0.5" ValueChanged="PositionSlider_ValueChanged" Maximum="500"/>
+            <TextBox x:Name="XPositionTextBox" TextWrapping="Wrap" Grid.Column="2" Grid.Row="1" Margin="0,0,10,0" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="50" IsEnabled="False"/>
+            <Label x:Name="YPositionLabel" Content="Y position" Grid.Row="2" HorizontalAlignment="Left"/>
+            <Slider x:Name="YPositionSlider" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" SmallChange="0.5" ValueChanged="PositionSlider_ValueChanged" Maximum="500"/>
+            <TextBox x:Name="YPositionTextBox" TextWrapping="Wrap" Grid.Column="2" Grid.Row="2" Margin="0,0,10,0" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="50" IsEnabled="False"/>
+            <Label x:Name="ColorLabel" Content="Color" Grid.Row="3" HorizontalAlignment="Left"/>
+            <Slider x:Name="RedSlider" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Maximum="255" BorderBrush="{x:Null}" Background="Red" ValueChanged="ColorSlider_ValueChanged" SmallChange="1"/>
+            <Slider x:Name="GreenSlider" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Maximum="255" Background="Lime" ValueChanged="ColorSlider_ValueChanged" SmallChange="1"/>
+            <Slider x:Name="BlueSlider" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Maximum="255" Background="Blue" ValueChanged="ColorSlider_ValueChanged" SmallChange="1"/>
+            <TextBox x:Name="RedTextBox" TextWrapping="Wrap" Grid.Row="3" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="50" IsEnabled="False" Text="0"/>
+            <TextBox x:Name="GreenTextBox" TextWrapping="Wrap" Grid.Row="4" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="50" IsEnabled="False" Text="0"/>
+            <TextBox x:Name="BlueTextBox" TextWrapping="Wrap" Grid.Row="5" Grid.Column="2" Margin="0,0,10,0" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Width="50" IsEnabled="False" Text="0"/>
+            <Rectangle x:Name="ColorRectangle" Stroke="Black" Grid.Row="4" Width="67"/>
+            <Label x:Name="FillLabel" Content="Fill?" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <CheckBox x:Name="FillCheckBox" Content="" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Unchecked="FillCheckBox_CheckedChanged" Checked="FillCheckBox_CheckedChanged"/>
+        </Grid>
+        <StackPanel x:Name="AddStackPanel" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center">
+            <Button x:Name="AddCircleButton" Content="Add circle" FontWeight="Bold" Margin="0,0,20,0" Width="80" Height="40" Click="AddShapeButton_Click"/>
+            <Button x:Name="AddSquareButton" Content="Add square" FontWeight="Bold" Height="40" Width="80" Margin="20,0,0,0" Click="AddShapeButton_Click"/>
+        </StackPanel>
+        <Button x:Name="DeleteAcvitveShapeButton" Content="Delete selected shape" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Grid.RowSpan="2" Width="200" Height="40" FontWeight="Bold" Click="DeleteAcvitveShapeButton_Click"/>
+
+    </Grid>
+</Window>

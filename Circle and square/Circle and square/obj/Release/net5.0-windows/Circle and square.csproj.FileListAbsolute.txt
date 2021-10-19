@@ -1,0 +1,22 @@
+D:\Desktop\Circle and square\Circle and square\Circle and square\bin\Release\net5.0-windows\Circle and square.exe
+D:\Desktop\Circle and square\Circle and square\Circle and square\bin\Release\net5.0-windows\Circle and square.deps.json
+D:\Desktop\Circle and square\Circle and square\Circle and square\bin\Release\net5.0-windows\Circle and square.runtimeconfig.json
+D:\Desktop\Circle and square\Circle and square\Circle and square\bin\Release\net5.0-windows\Circle and square.runtimeconfig.dev.json
+D:\Desktop\Circle and square\Circle and square\Circle and square\bin\Release\net5.0-windows\Circle and square.dll
+D:\Desktop\Circle and square\Circle and square\Circle and square\bin\Release\net5.0-windows\ref\Circle and square.dll
+D:\Desktop\Circle and square\Circle and square\Circle and square\bin\Release\net5.0-windows\Circle and square.pdb
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\Circle and square.csproj.AssemblyReference.cache
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\MainWindow.g.cs
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\App.g.cs
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\Circle and square_MarkupCompile.cache
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\Circle and square_MarkupCompile.lref
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\MainWindow.baml
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\Circle and square.g.resources
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\Circle and square.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\Circle and square.AssemblyInfoInputs.cache
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\Circle and square.AssemblyInfo.cs
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\Circle and square.csproj.CoreCompileInputs.cache
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\Circle and square.dll
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\ref\Circle and square.dll
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\Circle and square.pdb
+D:\Desktop\Circle and square\Circle and square\Circle and square\obj\Release\net5.0-windows\Circle and square.genruntimeconfig.cache
